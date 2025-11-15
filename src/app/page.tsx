@@ -37,7 +37,15 @@ export default function Home() {
     <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
       <section className="mb-8">
         <Logo />
-        <h1 className="mt-4 text-3xl font-bold">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
+        <div className="mt-4 flex items-center gap-4 flex-wrap">
+          <h1 className="text-3xl font-bold">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
+          <a
+            href="/names"
+            className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:opacity-90 transition-all"
+          >
+            🐾 Generate Names
+          </a>
+        </div>
         <p className="mt-2 text-zinc-600">Generate and copy adopt me fonts for Roblox Adopt Me. Create stylish adopt me fonts with bubble, bold, cute, small caps, and more font styles.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <input

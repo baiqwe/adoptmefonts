@@ -1,13 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7fbf" />
-      <stop offset="50%" stop-color="#ffb3d6" />
-      <stop offset="100%" stop-color="#ffeaf1" />
-    </linearGradient>
-  </defs>
-  <circle cx="32" cy="32" r="30" fill="url(#faviconGradient)" />
-  <path d="M32 38c-4-4-8-4-12 0 0-4 4-8 12-12 8 4 12 8 12 12-4-4-8-4-12 0z" fill="#ffffff" opacity="0.9" />
-  <path d="M32 16 L34 20 L38 20 L35 23 L37 27 L32 24 L27 27 L29 23 L26 20 L30 20 Z" fill="#ffffff" opacity="0.8" />
+  <!-- Cute cat face - solid color style -->
+  <!-- Head -->
+  <circle cx="32" cy="32" r="28" fill="#ff7fbf"/>
+  
+  <!-- Ears -->
+  <path d="M20 12 L28 24 L24 24 Z" fill="#ff7fbf"/>
+  <path d="M44 12 L36 24 L40 24 Z" fill="#ff7fbf"/>
+  <path d="M20 12 L26 20 L24 20 Z" fill="#ffb3d6"/>
+  <path d="M44 12 L38 20 L40 20 Z" fill="#ffb3d6"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="24" cy="30" rx="4" ry="6" fill="#ffffff"/>
+  <ellipse cx="40" cy="30" rx="4" ry="6" fill="#ffffff"/>
+  <circle cx="24" cy="30" r="2" fill="#333333"/>
+  <circle cx="40" cy="30" r="2" fill="#333333"/>
+  
+  <!-- Nose -->
+  <path d="M32 36 L30 40 L34 40 Z" fill="#ffb3d6"/>
+  
+  <!-- Mouth -->
+  <path d="M32 40 Q28 44 26 42" stroke="#333333" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M32 40 Q36 44 38 42" stroke="#333333" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Cheeks -->
+  <circle cx="16" cy="36" r="3" fill="#ffb3d6" opacity="0.6"/>
+  <circle cx="48" cy="36" r="3" fill="#ffb3d6" opacity="0.6"/>
 </svg>
-

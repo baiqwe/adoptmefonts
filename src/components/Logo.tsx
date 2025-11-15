@@ -10,34 +10,33 @@ export default function Logo() {
           aria-hidden
           className="drop-shadow-sm"
         >
-          <defs>
-            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#ff7fbf" />
-              <stop offset="50%" stopColor="#ffb3d6" />
-              <stop offset="100%" stopColor="#ffeaf1" />
-            </linearGradient>
-            <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#fff3f8" />
-              <stop offset="100%" stopColor="#f0f7ff" />
-            </linearGradient>
-          </defs>
-          {/* Background circle with gradient */}
-          <circle cx="32" cy="32" r="30" fill="url(#logoBg)" stroke="url(#logoGradient)" strokeWidth="2" />
-          {/* Decorative stars */}
-          <circle cx="20" cy="20" r="2" fill="#ffb3d6" opacity="0.6">
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
-          </circle>
-          <circle cx="44" cy="20" r="2" fill="#ffb3d6" opacity="0.6">
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite" />
-          </circle>
-          {/* Heart shape */}
-          <path d="M32 38c-4-4-8-4-12 0 0-4 4-8 12-12 8 4 12 8 12 12-4-4-8-4-12 0z" fill="url(#logoGradient)" />
-          {/* Sparkle effect */}
-          <path d="M32 16 L34 20 L38 20 L35 23 L37 27 L32 24 L27 27 L29 23 L26 20 L30 20 Z" fill="#ffb3d6" opacity="0.8" />
+          {/* Cute cat face - solid color style */}
+          {/* Head */}
+          <circle cx="32" cy="32" r="28" fill="#ff7fbf"/>
+          
+          {/* Ears */}
+          <path d="M20 12 L28 24 L24 24 Z" fill="#ff7fbf"/>
+          <path d="M44 12 L36 24 L40 24 Z" fill="#ff7fbf"/>
+          <path d="M20 12 L26 20 L24 20 Z" fill="#ffb3d6"/>
+          <path d="M44 12 L38 20 L40 20 Z" fill="#ffb3d6"/>
+          
+          {/* Eyes */}
+          <ellipse cx="24" cy="30" rx="4" ry="6" fill="#ffffff"/>
+          <ellipse cx="40" cy="30" rx="4" ry="6" fill="#ffffff"/>
+          <circle cx="24" cy="30" r="2" fill="#333333"/>
+          <circle cx="40" cy="30" r="2" fill="#333333"/>
+          
+          {/* Nose */}
+          <path d="M32 36 L30 40 L34 40 Z" fill="#ffb3d6"/>
+          
+          {/* Mouth */}
+          <path d="M32 40 Q28 44 26 42" stroke="#333333" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <path d="M32 40 Q36 44 38 42" stroke="#333333" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          
+          {/* Cheeks */}
+          <circle cx="16" cy="36" r="3" fill="#ffb3d6" opacity="0.6"/>
+          <circle cx="48" cy="36" r="3" fill="#ffb3d6" opacity="0.6"/>
         </svg>
-        {/* Decorative elements */}
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-300 rounded-full opacity-80 animate-pulse" />
-        <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-pink-300 rounded-full opacity-70" />
       </div>
       <div className="flex flex-col">
         <span className="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">

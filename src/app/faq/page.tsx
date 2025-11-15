@@ -1,6 +1,12 @@
 export const metadata = {
-  title: "Adopt Me Fonts FAQ",
-  description: "Learn how Adopt Me Unicode styles work and Roblox compatibility.",
+  title: "Adopt Me Fonts FAQ - How to Use Adopt Me Fonts",
+  description: "Learn how adopt me fonts work, Roblox compatibility, and how to use adopt me fonts in Adopt Me names and chat. Complete guide to adopt me font styles.",
+  keywords: [
+    "adopt me fonts faq",
+    "how to use adopt me fonts",
+    "adopt me fonts guide",
+    "roblox adopt me fonts compatibility",
+  ],
 };
 
 export default function FAQ() {

@@ -7,6 +7,7 @@ export default function Home() {
   const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
   const [text, setText] = useState(params.get("text") ?? "Adopt Me Fonts");
   const [selected, setSelected] = useState<string>(params.get("style") ?? "normal");
+  const [toast, setToast] = useState<string>("");
 
   useEffect(() => {
     const next = new URLSearchParams(window.location.search);
@@ -21,15 +22,23 @@ export default function Home() {
   const onCopy = async (value: string) => {
     try {
       await navigator.clipboard.writeText(value);
-    } catch {}
+      setToast("Copied");
+      setTimeout(() => setToast(""), 1200);
+    } catch {
+      setToast("Copy failed");
+      setTimeout(() => setToast(""), 1500);
+    }
   };
 
+  const selectedStyle = styles.find((s) => s.id === selected) ?? styles[0];
+  const selectedOutput = selectedStyle.apply(text);
+
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12">
+    <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
       <section className="mb-8">
         <Logo />
-        <h1 className="mt-4 text-3xl font-bold">Adopt Me Fonts Generator</h1>
-        <p className="mt-2 text-zinc-600">Generate and copy adopt me fonts for Roblox Adopt Me.</p>
+        <h1 className="mt-4 text-3xl font-bold">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
+        <p className="mt-2 text-zinc-600">Generate and copy adopt me fonts for Roblox Adopt Me. Create stylish adopt me fonts with bubble, bold, cute, small caps, and more font styles.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <input
             value={text}
@@ -45,11 +54,33 @@ export default function Home() {
           </button>
         </div>
         <p className="mt-2 text-xs text-zinc-500">Roblox may filter some characters. Keep names short.</p>
+        <div className="mt-6 rounded-xl border border-zinc-200 bg-white/95 backdrop-blur-sm p-4 shadow-sm">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 font-medium">
+              <span aria-hidden>{selectedStyle.icon}</span>
+              {selectedStyle.name}
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => onCopy(selectedOutput)}
+                className="rounded-md bg-black px-4 py-2 text-sm text-white hover:opacity-90"
+              >
+                Copy Selected
+              </button>
+            </div>
+          </div>
+          <div className="mt-3 break-words text-lg">{selectedOutput}</div>
+        </div>
+        {!!toast && (
+          <div role="status" aria-live="polite" className="fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-black px-4 py-2 text-sm text-white shadow-sm">
+            {toast}
+          </div>
+        )}
       </section>
 
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <section className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.map((s) => (
-          <div key={s.id} className={`rounded-xl border ${selected === s.id ? "border-black" : "border-zinc-200"} bg-white p-4`}>
+          <div key={s.id} className={`rounded-xl border transition-all ${selected === s.id ? "border-black shadow-md scale-[1.02]" : "border-zinc-200 hover:border-zinc-300"} bg-white/95 backdrop-blur-sm p-4 shadow-sm`}>
             <div className="flex items-center justify-between">
               <div className="font-medium flex items-center gap-2">
                 <span aria-hidden>{s.icon}</span>
@@ -57,7 +88,7 @@ export default function Home() {
               </div>
               <div className="flex gap-2">
                 <button
-                  onClick={() => setSelected(s.id)}
+                  onClick={() => { setSelected(s.id); setToast("Selected"); setTimeout(() => setToast(""), 800); }}
                   className={`rounded-md px-3 py-1 text-sm ${selected === s.id ? "bg-black text-white" : "border border-zinc-200"}`}
                 >
                   Select
@@ -83,32 +114,37 @@ export default function Home() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-2xl font-semibold">Adopt Me Fonts: Guide and Tips</h2>
+        <h2 className="text-2xl font-semibold">Adopt Me Fonts: Complete Guide and Tips</h2>
         <p className="mt-3 text-zinc-700">
-          Adopt Me Fonts help you style names and chat using Unicode characters. This free adopt me fonts generator lets you
-          type text, choose adopt me fonts like bubble, bold, cute, small caps, and aesthetic fullwidth, then copy the
-          result to use in Roblox Adopt Me.
+          Adopt Me fonts help you style names and chat using Unicode characters in Roblox Adopt Me. This free adopt me fonts generator lets you
+          type text, choose from various adopt me fonts styles like bubble fonts, bold, cute, small caps, and aesthetic fullwidth, then copy the
+          result to use in Roblox Adopt Me. Whether you're looking for cute adopt me fonts, bubble adopt me fonts, or stylish adopt me font styles,
+          our generator has you covered.
         </p>
-        <h3 className="mt-6 text-xl font-semibold">How to use the Adopt Me font generator</h3>
+        <h3 className="mt-6 text-xl font-semibold">How to use the Adopt Me fonts generator</h3>
         <p className="mt-2 text-zinc-700">
-          Enter your text above, pick adopt me fonts style, and press Copy. Then open Roblox Adopt Me, paste into your player name,
-          pet name, or chat. Keep names short and avoid excessive symbols to reduce filtering.
+          Using our adopt me fonts generator is simple: Enter your text above, pick your favorite adopt me fonts style, and press Copy. 
+          Then open Roblox Adopt Me, paste the adopt me fonts into your player name, pet name, or chat. Keep names short and avoid 
+          excessive symbols to reduce filtering. Our adopt me fonts tool works instantly - no download required.
         </p>
-        <h3 className="mt-6 text-xl font-semibold">Popular styles for Roblox Adopt Me</h3>
+        <h3 className="mt-6 text-xl font-semibold">Popular adopt me fonts styles for Roblox Adopt Me</h3>
         <p className="mt-2 text-zinc-700">
-          Players often use adopt me fonts like bubble fonts for cute vibes, bold for strong emphasis, small caps for clean labels, and
-          aesthetic fullwidth (vaporwave) for a retro feel. Utility adopt me fonts such as underline and strikethrough use
-          combining marks and may be filtered in some cases.
+          Players often use adopt me fonts like bubble fonts for cute vibes, bold adopt me fonts for strong emphasis, small caps for clean labels, and
+          aesthetic fullwidth (vaporwave) adopt me fonts for a retro feel. Cute adopt me fonts with hearts and sparkles are also very popular. 
+          Utility adopt me fonts such as underline and strikethrough use combining marks and may be filtered in some cases. Try different 
+          adopt me font styles to find what works best for your Roblox Adopt Me name.
         </p>
         <h3 className="mt-6 text-xl font-semibold">Is it safe to use Adopt Me fonts?</h3>
         <p className="mt-2 text-zinc-700">
-          These adopt me fonts styles are Unicode characters rendered by Roblox. While safe, some characters might not be visible on
-          all devices or could be replaced by filters. Test short names first and avoid rare symbols.
+          These adopt me fonts styles are Unicode characters rendered by Roblox. While safe to use, some adopt me fonts characters might not be visible on
+          all devices or could be replaced by filters. Test short names first and avoid rare symbols. Our adopt me fonts generator uses 
+          standard Unicode characters that are widely supported in Roblox Adopt Me.
         </p>
-        <h3 className="mt-6 text-xl font-semibold">More help</h3>
+        <h3 className="mt-6 text-xl font-semibold">More help with Adopt Me fonts</h3>
         <p className="mt-2 text-zinc-700">
-          For detailed explanations and compatibility notes, see the <a href="/faq" className="underline">Adopt Me Fonts FAQ</a>.
-          This adopt me fonts tool is free and works on mobile and desktop.
+          For detailed explanations and compatibility notes about adopt me fonts, see the <a href="/faq" className="underline">Adopt Me Fonts FAQ</a>.
+          This adopt me fonts tool is completely free and works on mobile and desktop. Need help with specific adopt me fonts styles? 
+          Check out our FAQ page for more information about using adopt me fonts in Roblox Adopt Me.
         </p>
       </section>
     </main>

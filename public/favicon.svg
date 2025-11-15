@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7fbf" />
+      <stop offset="50%" stop-color="#ffb3d6" />
+      <stop offset="100%" stop-color="#ffeaf1" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#faviconGradient)" />
+  <path d="M32 38c-4-4-8-4-12 0 0-4 4-8 12-12 8 4 12 8 12 12-4-4-8-4-12 0z" fill="#ffffff" opacity="0.9" />
+  <path d="M32 16 L34 20 L38 20 L35 23 L37 27 L32 24 L27 27 L29 23 L26 20 L30 20 Z" fill="#ffffff" opacity="0.8" />
+</svg>
+

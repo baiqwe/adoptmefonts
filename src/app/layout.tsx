@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -13,6 +13,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Adopt Me Fonts Generator - Free Roblox Adopt Me Fonts Tool",
@@ -20,12 +27,6 @@ export const metadata: Metadata = {
   },
   description:
     "Free Adopt Me fonts generator for Roblox. Create stylish adopt me fonts like bubble fonts, bold, cute, small caps, and aesthetic fullwidth. Copy and paste adopt me fonts directly into Roblox Adopt Me names and chat.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
   keywords: [
     "adopt me fonts",
     "adopt me font generator",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     "free adopt me fonts",
   ],
   metadataBase: new URL("https://adoptmefont.com"),
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://adoptmefont.com/" },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

@@ -1,4 +1,6 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Adopt Me Fonts FAQ - How to Use Adopt Me Fonts",
   description: "Learn how adopt me fonts work, Roblox compatibility, and how to use adopt me fonts in Adopt Me names and chat. Complete guide to adopt me font styles.",
   keywords: [
@@ -7,6 +9,21 @@ export const metadata = {
     "adopt me fonts guide",
     "roblox adopt me fonts compatibility",
   ],
+  alternates: {
+    canonical: "https://adoptmefont.com/faq",
+  },
+  openGraph: {
+    title: "Adopt Me Fonts FAQ - How to Use Adopt Me Fonts",
+    description:
+      "Detailed answers about Roblox Adopt Me fonts, compatibility tips, and how to style your player and pet names safely.",
+    url: "https://adoptmefont.com/faq",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adopt Me Fonts FAQ - Complete Guide",
+    description: "Everything you need to know about using Adopt Me fonts safely in Roblox.",
+  },
 };
 
 export default function FAQ() {

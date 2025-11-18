@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     title: "Adopt Me Names Generator - Cute Pet Names",
     description: "Generate cute and playful adopt me names and adopt me pet names with emojis.",
   },
+  alternates: {
+    canonical: "https://adoptmefont.com/names",
+  },
 };
 
 export default function NamesLayout({

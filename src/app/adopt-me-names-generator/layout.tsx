@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adopt Me Names Generator - Cute Pet Names for Roblox",
     description: "Generate cute and playful adopt me names and adopt me pet names with emojis. Free random name generator for Roblox Adopt Me.",
-    url: "https://adoptmefont.com/names",
+    url: "https://adoptmefont.com/adopt-me-names-generator",
   },
   twitter: {
     card: "summary_large_image",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Generate cute and playful adopt me names and adopt me pet names with emojis.",
   },
   alternates: {
-    canonical: "https://adoptmefont.com/names",
+    canonical: "https://adoptmefont.com/adopt-me-names-generator",
   },
 };
 

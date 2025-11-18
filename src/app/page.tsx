@@ -44,7 +44,7 @@ export default function Home() {
         <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
           <a
-            href="/names"
+            href="/adopt-me-names-generator"
             className="text-sm px-4 py-2.5 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:opacity-90 transition-all text-center sm:text-left flex-shrink-0"
           >
             🐾 Generate Names
@@ -274,7 +274,7 @@ export default function Home() {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-pink-500 mt-1">•</span>
-            <span><strong>Combine with emojis:</strong> Use our <a href="/names" className="underline text-pink-600">name generator</a> to combine fonts with emojis for even more unique names.</span>
+            <span><strong>Combine with emojis:</strong> Use our <a href="/adopt-me-names-generator" className="underline text-pink-600">name generator</a> to combine fonts with emojis for even more unique names.</span>
           </li>
         </ul>
 
@@ -326,7 +326,7 @@ export default function Home() {
         <div className="mt-6 sm:mt-8 p-4 sm:p-5 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg border border-pink-200">
           <p className="text-sm sm:text-base text-zinc-700">
             <strong>Need more help?</strong> Check out our <a href="/faq" className="underline text-pink-600 font-semibold">Adopt Me Fonts FAQ</a> for detailed answers to common questions. 
-            You can also use our <a href="/names" className="underline text-pink-600 font-semibold">name generator</a> to create cute pet names with emojis and fonts combined.
+            You can also use our <a href="/adopt-me-names-generator" className="underline text-pink-600 font-semibold">name generator</a> to create cute pet names with emojis and fonts combined.
           </p>
         </div>
       </section>

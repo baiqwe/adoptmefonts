@@ -114,7 +114,7 @@ export default function NamesPage() {
           </Link>
         </div>
         <p className="mt-2 text-sm sm:text-base text-zinc-600">
-          Generate cute and playful adopt me names and adopt me pet names with emojis. Get 5 unique name suggestions perfect for your Roblox Adopt Me pets and characters.
+          Generate cute and playful Adopt Me Names ideas with emojis, decorations, and unique Unicode fonts. Our Adopt Me Names Generator delivers 5 ready-to-use suggestions so your Roblox Adopt Me pets, traders, and profile stand out instantly.
         </p>
         
         <div className="mt-6">
@@ -273,9 +273,9 @@ export default function NamesPage() {
       <section className="mt-8 sm:mt-12">
         <h2 className="text-xl sm:text-2xl font-semibold">About Adopt Me Names Generator</h2>
         <p className="mt-2 sm:mt-3 text-sm sm:text-base text-zinc-700">
-          Our adopt me names generator creates cute and playful names perfect for your Roblox Adopt Me pets and characters. 
-          Each generated adopt me pet name combines adorable words with emojis and decorations to make your pet stand out. 
-          You can apply different font styles to each name, making them even more unique and personalized.
+          Our Adopt Me Names generator creates cute and playful names perfect for your Roblox Adopt Me pets and characters. 
+          Each generated Adopt Me name combines adorable words with emojis and decorations to make your pet stand out. 
+          You can apply different font styles to every Adopt Me Names idea, making it even more unique and personalized.
         </p>
         <h3 className="mt-4 sm:mt-6 text-lg sm:text-xl font-semibold">How to use Adopt Me Names Generator</h3>
         <p className="mt-2 text-sm sm:text-base text-zinc-700">

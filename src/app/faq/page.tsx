@@ -157,7 +157,7 @@ export default function FAQ() {
       <section className="mt-6">
         <h2 className="text-lg sm:text-xl font-semibold">How do I combine fonts with emojis?</h2>
         <p className="mt-2 text-sm sm:text-base text-zinc-700">
-          Use our <a href="/names" className="underline text-pink-600">name generator</a> to create names with emojis and fonts together. 
+          Use our <a href="/adopt-me-names-generator" className="underline text-pink-600">name generator</a> to create names with emojis and fonts together. 
           You can also manually add emojis before or after your styled text. Popular combinations include hearts, stars, and animal emojis with bubble or cute fonts.
         </p>
       </section>

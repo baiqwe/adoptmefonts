@@ -1,4 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://adoptmefont.com/" },
+  { name: "FAQ", url: "https://adoptmefont.com/faq" },
+];
 
 export const metadata: Metadata = {
   title: "Adopt Me Fonts FAQ - How to Use Adopt Me Fonts",
@@ -27,9 +35,18 @@ export const metadata: Metadata = {
 };
 
 export default function FAQ() {
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+  
   return (
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-12">
-      <h1 className="text-2xl sm:text-3xl font-bold">Adopt Me Fonts FAQ</h1>
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <main className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-12">
+        <Breadcrumbs items={breadcrumbs} />
+        <h1 className="text-2xl sm:text-3xl font-bold">Adopt Me Fonts FAQ</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -108,6 +125,7 @@ export default function FAQ() {
         <p className="mt-2 text-sm sm:text-base text-zinc-700">
           To change your Roblox player name with adopt me fonts: (1) Generate your styled text using our tool above, (2) Copy the result, 
           (3) Go to Roblox Settings → Profile → Display Name, (4) Paste your styled name and save. Your new name will appear in Adopt Me and all Roblox games.
+          For detailed step-by-step instructions, see our <a href="/how-to-use-adopt-me-fonts" className="text-pink-600 underline">complete guide</a>.
         </p>
       </section>
       <section className="mt-6">
@@ -128,7 +146,7 @@ export default function FAQ() {
       <section className="mt-6">
         <h2 className="text-lg sm:text-xl font-semibold">Which adopt me fonts are most compatible?</h2>
         <p className="mt-2 text-sm sm:text-base text-zinc-700">
-          The most compatible adopt me fonts are: <strong>Bold</strong> (excellent readability), <strong>Bubble</strong> (very popular, high compatibility), 
+          The most compatible adopt me fonts are: <strong>Bold</strong> (excellent readability), <strong><a href="/styles/bubble-fonts" className="text-pink-600 underline">Bubble</a></strong> (very popular, high compatibility), 
           <strong>Small Caps</strong> (clean and reliable), and <strong>Double Struck</strong> (works well across devices). 
           Decorative styles with combining marks (like Underline) may have lower compatibility.
         </p>
@@ -167,7 +185,8 @@ export default function FAQ() {
           Question marks (???) usually mean your device doesn&rsquo;t support those Unicode characters. Try using more common adopt me fonts like Bold, 
           Bubble, or Small Caps. These have the widest device support and should display correctly on all platforms.
         </p>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

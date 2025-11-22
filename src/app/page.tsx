@@ -144,7 +144,8 @@ export default function Home() {
       <section className="mt-8 sm:mt-12">
         <h2 className="text-xl sm:text-2xl font-semibold">How to Use Adopt Me Fonts in Roblox</h2>
         <p className="mt-2 sm:mt-3 text-sm sm:text-base text-zinc-700">
-          Using adopt me fonts in Roblox Adopt Me is straightforward. Follow these simple steps to customize your player name, pet name, or chat messages with stylish fonts.
+          Using adopt me fonts in Roblox Adopt Me is straightforward. Follow these simple steps to customize your player name, pet name, or chat messages with stylish fonts. 
+          For a detailed guide, check out our <a href="/how-to-use-adopt-me-fonts" className="text-pink-600 underline font-semibold">complete tutorial</a>.
         </p>
         
         <div className="mt-4 sm:mt-6 space-y-4">
@@ -190,11 +191,13 @@ export default function Home() {
           <div className="border border-zinc-200 rounded-lg p-4 bg-white">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xl">ⓑ</span>
-              <h4 className="font-semibold">Bubble Fonts</h4>
+              <h4 className="font-semibold">
+                <a href="/styles/bubble-fonts" className="hover:text-pink-600 transition-colors">Bubble Fonts</a>
+              </h4>
             </div>
             <p className="text-sm text-zinc-700">
               Bubble adopt me fonts are the most popular choice. They create a cute, playful look with circled letters that stand out. 
-              Perfect for pet names and player names. High compatibility with Roblox.
+              Perfect for pet names and player names. High compatibility with Roblox. <a href="/styles/bubble-fonts" className="text-pink-600 underline">Learn more about bubble fonts</a>.
             </p>
           </div>
           

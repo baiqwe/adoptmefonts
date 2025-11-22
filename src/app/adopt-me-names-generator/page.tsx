@@ -1,9 +1,17 @@
 "use client";
 import Link from "next/link";
+import Script from "next/script";
 import { useState } from "react";
 import { generateNames } from "@/lib/nameGenerator";
 import styles from "@/lib/styles";
 import Logo from "@/components/Logo";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
+import Breadcrumbs from "@/components/Breadcrumbs";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://adoptmefont.com/" },
+  { name: "Names Generator", url: "https://adoptmefont.com/adopt-me-names-generator" },
+];
 
 export default function NamesPage() {
   const [names, setNames] = useState<string[]>([]);
@@ -100,10 +108,19 @@ export default function NamesPage() {
     "flower-decor",
   ].map((id) => styles.find((s) => s.id === id)).filter(Boolean);
 
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
-      <section className="mb-8">
-        <Logo />
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
+        <Breadcrumbs items={breadcrumbs} />
+        <section className="mb-8">
+          <Logo />
         <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight">Adopt Me Names Generator - Cute Pet Names</h1>
           <Link
@@ -292,7 +309,8 @@ export default function NamesPage() {
           <li>Generate multiple times to find the perfect name</li>
         </ul>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
 

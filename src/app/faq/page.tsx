@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -175,17 +176,29 @@ export default function FAQ() {
       <section className="mt-6">
         <h2 className="text-lg sm:text-xl font-semibold">How do I combine fonts with emojis?</h2>
         <p className="mt-2 text-sm sm:text-base text-zinc-700">
-          Use our <a href="/adopt-me-names-generator" className="underline text-pink-600">name generator</a> to create names with emojis and fonts together. 
+          Use our <Link href="/adopt-me-names-generator" className="underline text-pink-600 font-semibold">name generator</Link> to create names with emojis and fonts together. 
           You can also manually add emojis before or after your styled text. Popular combinations include hearts, stars, and animal emojis with bubble or cute fonts.
+          For preppy aesthetic names with symbols, try our <Link href="/preppy-font-generator" className="underline text-pink-600 font-semibold">Preppy Font Generator</Link>.
         </p>
       </section>
       <section className="mt-6">
         <h2 className="text-lg sm:text-xl font-semibold">My name shows as question marks - what&rsquo;s wrong?</h2>
         <p className="mt-2 text-sm sm:text-base text-zinc-700">
           Question marks (???) usually mean your device doesn&rsquo;t support those Unicode characters. Try using more common adopt me fonts like Bold, 
-          Bubble, or Small Caps. These have the widest device support and should display correctly on all platforms.
+          Bubble, or Small Caps. These have the widest device support and should display correctly on all platforms. 
+          You can also use our <Link href="/tag-filter-checker" className="underline text-pink-600 font-semibold">Tag Filter Checker</Link> to test your name before using it.
         </p>
-        </section>
+      </section>
+      <section className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-6 border border-pink-200">
+        <h2 className="text-lg sm:text-xl font-semibold mb-3">Explore More Tools</h2>
+        <p className="text-sm sm:text-base text-zinc-700 mb-3">
+          Need more help? Check out our <Link href="/how-to-use-adopt-me-fonts" className="underline text-pink-600 font-semibold">complete guide</Link> on using adopt me fonts, 
+          or browse our <Link href="/pet-names" className="underline text-pink-600 font-semibold">pet name bank</Link> for name ideas.
+        </p>
+        <p className="text-sm sm:text-base text-zinc-700">
+          Want to find safe symbols? Visit our <Link href="/symbols" className="underline text-pink-600 font-semibold">symbol picker</Link> with tested and labeled symbols.
+        </p>
+      </section>
       </main>
     </>
   );

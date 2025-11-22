@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import styles from "@/lib/styles";
-import Logo from "@/components/Logo";
 
 export default function Home() {
   const params = new URLSearchParams(typeof window !== "undefined" ? window.location.search : "");
@@ -40,17 +39,8 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
       <section className="mb-8">
-        <Logo />
-        <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-          <h1 className="text-2xl sm:text-3xl font-bold leading-tight">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
-          <a
-            href="/adopt-me-names-generator"
-            className="text-sm px-4 py-2.5 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:opacity-90 transition-all text-center sm:text-left flex-shrink-0"
-          >
-            🐾 Generate Names
-          </a>
-        </div>
-        <p className="mt-2 text-sm sm:text-base text-zinc-600">Generate and copy adopt me fonts for Roblox Adopt Me. Create stylish adopt me fonts with bubble, bold, cute, small caps, and more font styles.</p>
+        <h1 className="text-2xl sm:text-3xl font-bold leading-tight">Adopt Me Fonts Generator - Free Roblox Font Tool</h1>
+        <p className="mt-2 text-sm sm:text-base text-zinc-600">Generate and copy adopt me fonts for Roblox Adopt Me. Create stylish adopt me fonts with bubble, bold, cute, preppy, aesthetic, small caps, and more font styles. Perfect for player names, pet names, and chat messages.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <input
             value={text}
@@ -130,6 +120,28 @@ export default function Home() {
             </div>
           );
         })}
+      </section>
+
+      <section className="mt-8 sm:mt-10">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">More Tools</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/preppy-font-generator" className="border border-zinc-200 rounded-lg p-4 hover:border-pink-300 transition-colors">
+            <h3 className="font-semibold mb-2">✨ Preppy Font Generator</h3>
+            <p className="text-sm text-zinc-700">Create aesthetic preppy names with symbols like ✨ 🎀 🐾. Perfect for that clean, polished look.</p>
+          </a>
+          <a href="/symbols" className="border border-zinc-200 rounded-lg p-4 hover:border-pink-300 transition-colors">
+            <h3 className="font-semibold mb-2">🎀 Safe Symbols</h3>
+            <p className="text-sm text-zinc-700">Browse safe symbols that work in Roblox. All symbols tested and labeled with safety status.</p>
+          </a>
+          <a href="/tag-filter-checker" className="border border-zinc-200 rounded-lg p-4 hover:border-pink-300 transition-colors">
+            <h3 className="font-semibold mb-2">🔍 Tag Filter Checker</h3>
+            <p className="text-sm text-zinc-700">Test if your font name will work in Roblox before using it. Get safety scores and suggestions.</p>
+          </a>
+          <a href="/pet-names" className="border border-zinc-200 rounded-lg p-4 hover:border-pink-300 transition-colors">
+            <h3 className="font-semibold mb-2">🐉 Pet Name Bank</h3>
+            <p className="text-sm text-zinc-700">Find perfect names for your pets. Frost dragons, shadow dragons, cows, and more.</p>
+          </a>
+        </div>
       </section>
 
       <section className="mt-8 sm:mt-10">

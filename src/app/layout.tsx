@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navigation from "@/components/Navigation";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,6 +34,8 @@ export const metadata: Metadata = {
     "roblox adopt me fonts",
     "cute adopt me fonts",
     "bubble adopt me fonts",
+    "preppy adopt me fonts",
+    "aesthetic adopt me fonts",
     "adopt me font styles",
     "adopt me text generator",
     "roblox font generator",
@@ -187,6 +190,7 @@ export default function RootLayout({
             gtag('config', 'G-2N6FHJDCPJ');
           `}
         </Script>
+        <Navigation />
         {children}
       </body>
     </html>

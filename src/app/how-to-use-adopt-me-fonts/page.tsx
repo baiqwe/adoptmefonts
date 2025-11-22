@@ -198,8 +198,11 @@ export default function HowToPage() {
           <p className="text-zinc-700 mb-4">
             Now that you know how to use adopt me fonts, head over to our <Link href="/" className="text-pink-600 underline font-semibold">font generator</Link> and create your perfect styled name. It only takes a few minutes, and you&apos;ll have a unique name that stands out in Adopt Me.
           </p>
-          <p className="text-zinc-700">
+          <p className="text-zinc-700 mb-4">
             Need more help? Check out our <Link href="/faq" className="text-pink-600 underline font-semibold">FAQ page</Link> for answers to common questions, or explore our <Link href="/styles/bubble-fonts" className="text-pink-600 underline font-semibold">style guides</Link> to learn more about specific font types.
+          </p>
+          <p className="text-zinc-700">
+            Want to create preppy or aesthetic names? Try our <Link href="/preppy-font-generator" className="text-pink-600 underline font-semibold">Preppy Font Generator</Link> or browse <Link href="/pet-names" className="text-pink-600 underline font-semibold">pet name ideas</Link> for inspiration.
           </p>
         </section>
       </main>

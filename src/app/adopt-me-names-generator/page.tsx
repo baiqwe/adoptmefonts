@@ -4,7 +4,6 @@ import Script from "next/script";
 import { useState } from "react";
 import { generateNames } from "@/lib/nameGenerator";
 import styles from "@/lib/styles";
-import Logo from "@/components/Logo";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
@@ -120,8 +119,7 @@ export default function NamesPage() {
       <main className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
         <section className="mb-8">
-          <Logo />
-        <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight">Adopt Me Names Generator - Cute Pet Names</h1>
           <Link
             href="/"
@@ -308,6 +306,15 @@ export default function NamesPage() {
           <li>Use font styles to make names more unique</li>
           <li>Generate multiple times to find the perfect name</li>
         </ul>
+        <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-4 border border-pink-200">
+          <p className="text-sm text-zinc-700 mb-2">
+            <strong>Need more name ideas?</strong> Browse our <Link href="/pet-names" className="text-pink-600 underline font-semibold">pet name bank</Link> for frost dragon names, shadow dragon names, and more. 
+            Or try our <Link href="/preppy-font-generator" className="text-pink-600 underline font-semibold">Preppy Font Generator</Link> for aesthetic names with symbols.
+          </p>
+          <p className="text-sm text-zinc-700">
+            Want to test your name? Use our <Link href="/tag-filter-checker" className="text-pink-600 underline font-semibold">Tag Filter Checker</Link> before using it in Roblox.
+          </p>
+        </div>
       </section>
       </main>
     </>

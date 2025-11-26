@@ -109,7 +109,7 @@ export default function BubbleFontsPage() {
               Compared to other font styles, bubble fonts offer excellent readability and compatibility. They&apos;re more playful than <Link href="/styles/bold-fonts" className="text-pink-600 underline">bold fonts</Link> but less decorative than <Link href="/styles/cute-fonts" className="text-pink-600 underline">cute fonts with hearts</Link>. This makes them a safe, reliable choice for most players.
             </p>
             <p className="text-zinc-700">
-              If you&apos;re looking for something similar but want more options, check out our <Link href="/styles/star-brackets" className="text-pink-600 underline">star brackets</Link> or <Link href="/styles/cute-brackets" className="text-pink-600 underline">cute brackets</Link> styles. They offer similar playful vibes with different decorative elements.
+              If you&apos;re looking for something similar but want more options, check out our <Link href="/" className="text-pink-600 underline">main font generator</Link> to explore star brackets, cute brackets, and other decorative styles. They offer similar playful vibes with different decorative elements.
             </p>
           </div>
         </section>

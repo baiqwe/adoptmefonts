@@ -80,3 +80,4 @@ export function getSymbolsByCategory(category: string): Symbol[] {
 }
 
 
+

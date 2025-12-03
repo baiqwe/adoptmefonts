@@ -145,12 +145,34 @@ export default function Home() {
       </section>
 
       <section className="mt-8 sm:mt-10">
-        <h2 className="text-lg sm:text-xl font-semibold">FAQ</h2>
-        <ul className="mt-2 list-disc pl-6 text-zinc-700">
-          <li>These are Unicode characters, not real fonts.</li>
-          <li>Some symbols may be filtered or not visible in Roblox.</li>
-          <li>Copy the result and paste it into your Adopt Me name or chat.</li>
-        </ul>
+        <h2 className="text-lg sm:text-xl font-semibold">What is an Adopt Me Font Generator?</h2>
+        <p className="mt-2 text-sm sm:text-base text-zinc-700">
+          An Adopt Me Font Generator is a specialized tool designed for Roblox players who want to customize their in-game appearance. Unlike standard text, this tool converts your letters into mathematical alphanumeric symbols (like <strong>𝐁𝐨𝐥𝐝</strong> or <strong>Ⓑⓤⓑⓑⓛⓔ</strong>). These symbols allow you to bypass the standard font limitations in Roblox chat, pet names, and profile bios, giving you a unique aesthetic that matches your style.
+        </p>
+      </section>
+
+      <section className="mt-8 sm:mt-10">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-medium text-zinc-900">Are these real fonts or hacks?</h3>
+            <p className="text-sm text-zinc-700 mt-1">
+              These are not hacks or custom files. Our tool generates <strong>Unicode characters</strong> that look like styled fonts. Because they are standard text characters, you can copy and paste them directly into Roblox without installing any software.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-medium text-zinc-900">Why do some fonts show as boxes or question marks?</h3>
+            <p className="text-sm text-zinc-700 mt-1">
+              This happens when a device (like an older phone or tablet) doesn&apos;t support specific Unicode symbols. For the best compatibility in Adopt Me, we recommend using <strong>Bubble Fonts</strong> or <strong>Bold text</strong>, as these are supported on almost all devices.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-medium text-zinc-900">Can I use these fonts for my pet&apos;s name?</h3>
+            <p className="text-sm text-zinc-700 mt-1">
+              Absolutely! These fonts are perfect for naming pets like the Frost Dragon, Shadow Dragon, or Unicorn. Styled text helps your pet stand out in the trading center. Just keep the name short (under 20 characters) to avoid filtering.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="mt-8 sm:mt-12">
@@ -343,6 +365,26 @@ export default function Home() {
             <strong>Need more help?</strong> Check out our <a href="/faq" className="underline text-pink-600 font-semibold">FAQ page</a> for detailed answers to common questions, or read our <a href="/blog" className="underline text-pink-600 font-semibold">blog</a> for tips and guides. 
             You can also use our <a href="/adopt-me-names-generator" className="underline text-pink-600 font-semibold">name generator</a> to create cute pet names with emojis and styled text combined.
           </p>
+        </div>
+      </section>
+
+      <section className="mt-8 sm:mt-12 mb-8">
+        <h2 className="text-xl font-semibold mb-4">Expert Tips for Adopt Me Players</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg border border-zinc-200">
+            <h3 className="font-semibold mb-2">Naming Your Pets</h3>
+            <p className="text-sm text-zinc-600 mb-3">Struggling to name your new legendary pet? Check out our curated lists for specific pets.</p>
+            <ul className="text-sm space-y-1">
+              <li><a href="/pet-names/frost-dragon" className="text-pink-600 hover:underline">❄️ Best Frost Dragon Names</a></li>
+              <li><a href="/pet-names/shadow-dragon" className="text-pink-600 hover:underline">🌑 Top Shadow Dragon Names</a></li>
+              <li><a href="/blog/best-adopt-me-pet-names-2024" className="text-pink-600 hover:underline">🏆 2024 Pet Name Trends</a></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg border border-zinc-200">
+            <h3 className="font-semibold mb-2">Safety & Filters</h3>
+            <p className="text-sm text-zinc-600 mb-3">Learn how to create names that won&apos;t get tagged by Roblox&apos;s filter system.</p>
+            <a href="/blog/how-to-prevent-name-filtering-roblox" className="text-pink-600 hover:underline text-sm font-medium">Read our Anti-Filter Guide →</a>
+          </div>
         </div>
       </section>
     </main>

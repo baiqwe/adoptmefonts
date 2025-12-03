@@ -9,7 +9,7 @@ export default function Navigation() {
           <Link href="/" className="flex-shrink-0">
             <Logo />
           </Link>
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-5">
             <Link
               href="/blog"
               className="px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base font-medium text-zinc-700 hover:text-pink-600 hover:bg-pink-50 transition-colors"
@@ -23,6 +23,12 @@ export default function Navigation() {
               About
             </Link>
             <Link
+              href="/tag-filter-checker"
+              className="px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base font-medium text-zinc-700 hover:text-pink-600 hover:bg-pink-50 transition-colors"
+            >
+              🔍 Filter Checker
+            </Link>
+            <Link
               href="/preppy-font-generator"
               className="px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base font-medium text-zinc-700 hover:text-pink-600 hover:bg-pink-50 transition-colors"
             >
@@ -34,6 +40,14 @@ export default function Navigation() {
             >
               🐾 Generate Names
             </Link>
+            <a
+              href="https://www.roblox.com/games/920587237/Adopt-Me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 sm:px-5 py-2 rounded-lg text-sm sm:text-base font-semibold text-white bg-pink-600 hover:bg-pink-700 transition-colors shadow-sm"
+            >
+              ▶ Play
+            </a>
           </div>
         </div>
       </div>

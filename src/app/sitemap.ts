@@ -20,5 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/pet-names/frost-dragon`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/pet-names/shadow-dragon`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/pet-names/cow`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/blog/best-adopt-me-pet-names-2024`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/blog/how-to-prevent-name-filtering-roblox`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/terms-of-service`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 }

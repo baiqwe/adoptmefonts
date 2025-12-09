@@ -86,7 +86,7 @@ export default function PreventNameFiltering() {
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">Best Practices for Name Creation</h2>
-            
+
             <h3 className="text-lg font-medium mt-6 mb-3">Keep Names Short</h3>
             <p className="mb-4">
               Roblox has character limits for names. Keeping your name under 20 characters significantly reduces the chance of it being filtered. Shorter names are also easier to read and remember.
@@ -142,8 +142,8 @@ export default function PreventNameFiltering() {
             <h3 className="text-lg font-semibold mb-4">Related Articles</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/blog/roblox-font-compatibility-guide" className="text-pink-600 underline">
-                  Roblox Font Compatibility Guide
+                <Link href="/tag-filter-checker" className="text-pink-600 underline">
+                  Check Name Compatibility Tool
                 </Link>
               </li>
               <li>

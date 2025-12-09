@@ -91,7 +91,7 @@ export default function BestPetNames2024() {
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">Popular Name Categories</h2>
-            
+
             <h3 className="text-lg font-medium mt-6 mb-3">Cute Names</h3>
             <p className="mb-4">
               Cute names are always popular, especially for pets like cows, cats, and dogs. Consider names like "Fluffy," "Bubbles," "Sparkle," or "Cupcake." You can enhance these with cute fonts using our <Link href="/styles/cute-fonts" className="text-pink-600 underline">cute fonts generator</Link>.
@@ -141,8 +141,8 @@ export default function BestPetNames2024() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/creating-aesthetic-preppy-names" className="text-pink-600 underline">
-                  Creating Aesthetic Preppy Names for Roblox
+                <Link href="/preppy-font-generator" className="text-pink-600 underline">
+                  Create Aesthetic Preppy Names
                 </Link>
               </li>
             </ul>

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/adopt-me-names-generator`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/how-to-use-adopt-me-fonts`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/styles`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/styles/bubble-fonts`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/styles/cute-fonts`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/styles/bold-fonts`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },

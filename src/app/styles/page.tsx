@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import styles from "@/lib/styles"; // Adjust import path if needed, assuming styles is in @/lib/styles or similar. user said "@/lib/styles"
+import styles from "@/lib/styles";
 
 export const metadata: Metadata = {
     title: "All Font Styles | Adopt Me Fonts",
@@ -15,6 +15,22 @@ const breadcrumbs = [
 ];
 
 export default function StylesPage() {
+    // 定义 ID 到 URL 的特定映射关系
+    // 如果 ID 在这里，就用映射的 URL；如果不在，默认跳到首页或通用处理
+    const getStyleLink = (id: string) => {
+        switch (id) {
+            case 'bubble': return '/styles/bubble-fonts';
+            case 'bold': return '/styles/bold-fonts';
+            case 'cute': return '/styles/cute-fonts';
+            case 'small-caps': return '/styles/small-caps';
+            case 'double-struck': return '/styles/double-struck';
+            case 'star-brackets': return '/styles/star-brackets';
+            // 对于没有专门页面的样式，目前最好的做法是跳转到首页并带上参数，或者暂时不生成链接
+            // 这里我们让它跳转到首页并选中该样式，这对用户体验最好
+            default: return `/?style=${id}`;
+        }
+    };
+
     return (
         <main className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12">
             <Breadcrumbs items={breadcrumbs} />
@@ -27,8 +43,7 @@ export default function StylesPage() {
                 {styles.map((s) => (
                     <Link
                         key={s.id}
-                        // 注意：这里做了兼容处理，确保能跳转到正确的子页面
-                        href={`/styles/${s.id.includes('font') ? s.id : s.id + '-fonts'}`}
+                        href={getStyleLink(s.id)}
                         className="p-6 border border-zinc-200 rounded-xl hover:border-pink-400 hover:shadow-md transition-all bg-white flex items-center gap-3"
                     >
                         <span className="text-2xl">{s.icon}</span>

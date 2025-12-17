@@ -68,6 +68,16 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <a href="https://www.theforgewiki.com" target="_blank" rel="noopener noreferrer" className="text-zinc-700 hover:text-pink-600 transition-colors">
+                  The Forge Wiki
+                </a>
+              </li>
+              <li>
+                <a href="https://www.deadlyblox.com" target="_blank" rel="noopener noreferrer" className="text-zinc-700 hover:text-pink-600 transition-colors">
+                  Deadly Delivery Wiki
+                </a>
+              </li>
             </ul>
           </div>
 

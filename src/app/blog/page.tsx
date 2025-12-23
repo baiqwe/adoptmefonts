@@ -122,8 +122,8 @@ const blogPosts = [
   },
   {
     slug: "adopt-me-neon-cave-secrets",
-    title: "Adopt Me Neon Cave Tips: Fast Merging Techniques and Glitch Spots",
-    excerpt: "Master the Neon Cave with veteran player techniques. Learn precise positioning, quick merge sequences, and efficiency hacks.",
+    title: "Adopt Me Neon Cave Tips: Fast Merging Techniques and Pro Tips",
+    excerpt: "Master the Neon Cave with veteran player techniques. Learn precise positioning, quick merge sequences, and efficiency tips.",
     date: "2025-11-21",
     readTime: "9 min read",
   },

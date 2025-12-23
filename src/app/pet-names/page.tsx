@@ -1,40 +1,44 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { petNameCategories, PetName } from "@/lib/petNames";
+import styles from "@/lib/styles";
 
 const breadcrumbs = [
   { name: "Home", url: "https://adoptmefont.com/" },
   { name: "Pet Names", url: "https://adoptmefont.com/pet-names" },
 ];
 
-const petCategories = [
-  {
-    id: "frost-dragon",
-    name: "Frost Dragon",
-    description: "Cool and icy names perfect for frost dragons",
-    icon: "❄️",
-    url: "/pet-names/frost-dragon",
-  },
-  {
-    id: "shadow-dragon",
-    name: "Shadow Dragon",
-    description: "Dark and mysterious names for shadow dragons",
-    icon: "🌑",
-    url: "/pet-names/shadow-dragon",
-  },
-  {
-    id: "cow",
-    name: "Cow",
-    description: "Cute and friendly names for cows",
-    icon: "🐄",
-    url: "/pet-names/cow",
-  },
+const petTypes = [
+  { id: "all", name: "All Pets", icon: "🐾" },
+  { id: "frost-dragon", name: "Frost Dragon", icon: "❄️" },
+  { id: "shadow-dragon", name: "Shadow Dragon", icon: "🌑" },
+  { id: "cow", name: "Cow", icon: "🐄" },
 ];
 
 export default function PetNamesPage() {
+  const [selectedPet, setSelectedPet] = useState("all");
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
+  const getFilteredNames = (): { category: string; names: PetName[] }[] => {
+    if (selectedPet === "all") {
+      return Object.entries(petNameCategories).map(([category, names]) => ({
+        category,
+        names,
+      }));
+    }
+    return [{ category: selectedPet, names: petNameCategories[selectedPet] || [] }];
+  };
+
+  const filteredData = getFilteredNames();
+
+  const getCategoryDisplay = (category: string) => {
+    const pet = petTypes.find((p) => p.id === category);
+    return pet ? `${pet.icon} ${pet.name}` : category;
+  };
 
   return (
     <>
@@ -45,40 +49,88 @@ export default function PetNamesPage() {
       />
       <main className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">Pet Name Bank - Adopt Me Pet Names</h1>
         <p className="text-lg text-zinc-700 mb-8">
-          Find the perfect name for your Adopt Me pets. Browse our collection of pet names organized by pet type. Each name comes with font style suggestions to make it look even better.
+          Find the perfect name for your Adopt Me pets. Browse our complete collection of 45+ curated pet names with font style suggestions. Filter by pet type to find names that match your legendary pets.
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-6">Browse Pet Names by Category</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {petCategories.map((category) => (
-              <Link
-                key={category.id}
-                href={category.url}
-                className="border border-zinc-200 rounded-xl p-6 hover:border-pink-300 hover:shadow-md transition-all bg-white"
+          <h2 className="text-2xl font-semibold mb-4">Filter by Pet Type</h2>
+          <div className="flex flex-wrap gap-2">
+            {petTypes.map((pet) => (
+              <button
+                key={pet.id}
+                onClick={() => setSelectedPet(pet.id)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedPet === pet.id
+                    ? "bg-pink-600 text-white"
+                    : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
+                  }`}
               >
-                <div className="text-4xl mb-3">{category.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{category.name} Names</h3>
-                <p className="text-zinc-700 text-sm mb-4">{category.description}</p>
-                <span className="text-pink-600 text-sm font-semibold hover:underline">
-                  Browse names →
-                </span>
-              </Link>
+                {pet.icon} {pet.name}
+              </button>
             ))}
           </div>
         </section>
 
+        {filteredData.map(({ category, names }) => (
+          <section key={category} className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">{getCategoryDisplay(category)} Names</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {names.map((petName, index) => {
+                const recommendedStyles = petName.styles
+                  .map((id) => styles.find((s) => s.id === id))
+                  .filter(Boolean);
+
+                return (
+                  <div key={`${category}-${index}`} className="border border-zinc-200 rounded-lg p-4 bg-white hover:border-pink-300 transition-colors">
+                    <h3 className="text-xl font-semibold mb-3">{petName.name}</h3>
+                    <div className="space-y-2 mb-3">
+                      {recommendedStyles.slice(0, 2).map((style) => {
+                        if (!style) return null;
+                        const styled = style.apply(petName.name);
+                        return (
+                          <div key={style.id} className="flex items-center justify-between text-sm">
+                            <span>{styled}</span>
+                            <Link
+                              href={`/?text=${encodeURIComponent(petName.name)}&style=${style.id}`}
+                              className="text-xs text-pink-600 hover:underline"
+                            >
+                              Use
+                            </Link>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <Link
+                      href={`/?text=${encodeURIComponent(petName.name)}`}
+                      className="text-sm text-pink-600 hover:underline font-semibold"
+                    >
+                      All styles →
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">How to Use Pet Names</h2>
-          <p className="text-zinc-700 mb-4">
-            Each pet name page includes multiple name suggestions with font style previews. Click &quot;Use this style&quot; to generate that name with the selected font, or click &quot;Generate more styles&quot; to see all available font options.
-          </p>
-          <p className="text-zinc-700 mb-4">
-            Once you&apos;ve found a name you like, copy it and paste it into Roblox Adopt Me when naming your pet. Remember to keep names short (under 20 characters) for best results.
-          </p>
+          <h2 className="text-2xl font-semibold mb-4">Naming Tips by Pet Type</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+              <h3 className="font-semibold mb-2">❄️ Frost Dragon</h3>
+              <p className="text-sm text-zinc-700">Use ice and winter themes. Bold fonts convey power. Popular: Frostbite, Glacier, Aurora.</p>
+            </div>
+            <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
+              <h3 className="font-semibold mb-2">🌑 Shadow Dragon</h3>
+              <p className="text-sm text-zinc-700">Dark and mysterious names work best. Bold sans-serif fonts add edge. Popular: Midnight, Eclipse, Phantom.</p>
+            </div>
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <h3 className="font-semibold mb-2">🐄 Cow</h3>
+              <p className="text-sm text-zinc-700">Cute and friendly names match the vibe. Bubble fonts are perfect. Popular: Bessie, Buttercup, Daisy.</p>
+            </div>
+          </div>
         </section>
 
         <section className="mb-8">
@@ -116,6 +168,3 @@ export default function PetNamesPage() {
     </>
   );
 }
-
-
-

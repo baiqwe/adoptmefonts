@@ -82,6 +82,11 @@ export default function BestPetNames2024() {
               Your pet's name is how other players will remember your pet. A creative, unique name can make your pet stand out in trades and make your collection more memorable. Plus, using styled fonts and emojis can add personality and make your pets even more distinctive.
             </p>
 
+            <div className="my-6">
+              <img src="/adopt-me-game-world.webp" alt="Roblox Adopt Me game world overview showing players and pets" className="rounded-lg shadow-lg w-full" loading="lazy" />
+              <p className="text-sm text-zinc-500 mt-2 text-center italic">The Adopt Me game world where your pet's name will be displayed</p>
+            </div>
+
             <h2 className="text-xl font-semibold mt-8 mb-4">Tips for Choosing Great Pet Names</h2>
             <ul className="list-disc pl-6 space-y-2 mb-6">
               <li><strong>Keep it short:</strong> Roblox has character limits, and shorter names (under 20 characters) are less likely to be filtered.</li>

@@ -38,14 +38,14 @@ export default function BlogPost() {
           <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">
             Adopt Me Fonts Naming Revolution: How I Stand Out Using Custom Fonts
           </h1>
-          
+
           <div className="flex items-center gap-4 text-sm text-zinc-600 mb-8">
             <time dateTime="2025-11-19T12:00:00.000Z">November 19, 2025</time>
             <span>•</span>
             <span>10-12 min read</span>
           </div>
 
-          
+
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-zinc-700 leading-relaxed mb-6">
               After playing <strong>Adopt Me!</strong> for months, I discovered that one detail I initially ignored became the key to standing out: my name and chat fonts. The moment I started using custom <Link href="/" className="text-pink-600 underline hover:text-pink-700">Adopt Me fonts</Link>, everything changed.
@@ -64,7 +64,7 @@ export default function BlogPost() {
             </div>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">Basic Font Transformation Techniques</h2>
-            
+
             <h3 className="text-xl font-semibold mt-6 mb-3">1. Using Special Unicode Characters</h3>
             <p className="text-zinc-700 mb-4">
               The first trick I learned was using special symbols:
@@ -77,8 +77,8 @@ export default function BlogPost() {
             </ul>
 
             <div className="my-6">
-              <img src="/placeholder-font-examples.jpg" alt="Examples of Adopt Me font styles showing different Unicode characters and styling options" className="rounded-lg shadow-lg w-full" />
-              <p className="text-sm text-zinc-500 mt-2 text-center italic">Different font styles you can create for Adopt Me</p>
+              <img src="/adopt-me-font-generator-result.webp" alt="Adopt Me font generator showing different Unicode font styles for pet names" className="rounded-lg shadow-lg w-full" loading="lazy" />
+              <p className="text-sm text-zinc-500 mt-2 text-center italic">Different font styles you can create for Adopt Me using our generator</p>
             </div>
 
             <h3 className="text-xl font-semibold mt-6 mb-3">2. Name Centering and Spacing</h3>
@@ -174,7 +174,7 @@ export default function BlogPost() {
               Ready to transform your Adopt Me presence? Try our <Link href="/" className="text-pink-600 underline font-semibold hover:text-pink-700">free font generator</Link> now and see the difference!
             </p>
           </div>
-    
+
 
           <div className="mt-12 pt-8 border-t border-zinc-200">
             <h2 className="text-2xl font-bold mb-4">Related Tools</h2>

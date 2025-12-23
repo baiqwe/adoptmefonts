@@ -23,6 +23,45 @@ export default function PetNamesPage() {
   const [selectedPet, setSelectedPet] = useState("all");
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I match my pet's name with its theme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Frost dragons work great with ice-themed names like Glacier, Aurora, or Frostbite. Shadow dragons fit dark, mysterious names like Eclipse, Phantom, or Midnight. Cows and farm pets suit cute, friendly names like Bessie, Buttercup, or Daisy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What font style should I use for pet names?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bold fonts work well for powerful pets like dragons, conveying strength and status. Cute bubble fonts are perfect for friendly pets like cows, cats, and dogs. Small caps offer a clean, professional look for any pet type."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should my Adopt Me pet name be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Keep pet names under 20 characters. Shorter names are less likely to be filtered by Roblox and look cleaner in-game. Names with fewer special characters also have better compatibility across devices."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I test if my pet name will work in Roblox?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our Tag Filter Checker tool before finalizing any pet name. This helps identify if certain characters or words might be filtered by Roblox's moderation system."
+        }
+      }
+    ]
+  };
+
   const getFilteredNames = (): { category: string; names: PetName[] }[] => {
     if (selectedPet === "all") {
       return Object.entries(petNameCategories).map(([category, names]) => ({
@@ -47,6 +86,11 @@ export default function PetNamesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <main className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
 
@@ -63,8 +107,8 @@ export default function PetNamesPage() {
                 key={pet.id}
                 onClick={() => setSelectedPet(pet.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedPet === pet.id
-                    ? "bg-pink-600 text-white"
-                    : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
+                  ? "bg-pink-600 text-white"
+                  : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
                   }`}
               >
                 {pet.icon} {pet.name}

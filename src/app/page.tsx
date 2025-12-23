@@ -377,6 +377,10 @@ export default function Home() {
             I spent hours manually copying Unicode characters from different websites, only to find most were filtered or displayed as boxes.
             That&apos;s when I decided to build a <strong>comprehensive, tested tool</strong> specifically for Roblox Adopt Me.
           </p>
+          <div className="my-4">
+            <img src="/adopt-me-player-character.webp" alt="My Roblox Adopt Me character with styled font name displayed in-game" className="rounded-lg shadow-lg w-full max-w-md mx-auto" loading="lazy" />
+            <p className="text-xs text-zinc-500 mt-2 text-center italic">My character in Adopt Me testing different font styles</p>
+          </div>
           <p>
             Every font style here has been <strong>personally tested in-game across devices</strong> (PC, mobile, tablet).
             The compatibility ratings come from real player feedback in the Adopt Me trading community.

@@ -102,6 +102,11 @@ export default function PreventNameFiltering() {
               Always test your name before finalizing it. Our <Link href="/tag-filter-checker" className="text-pink-600 underline font-semibold">Tag Filter Checker</Link> can help you identify potential issues before you try to use the name in Roblox.
             </p>
 
+            <div className="my-6">
+              <img src="/adopt-me-pet-rename-dialog.webp" alt="Roblox Adopt Me pet rename dialog showing how to enter styled font names" className="rounded-lg shadow-lg w-full" loading="lazy" />
+              <p className="text-sm text-zinc-500 mt-2 text-center italic">The pet rename dialog in Adopt Me where you paste your styled name</p>
+            </div>
+
             <h2 className="text-xl font-semibold mt-8 mb-4">Common Filter Triggers</h2>
             <ul className="list-disc pl-6 space-y-2 mb-6">
               <li><strong>Too many special characters:</strong> While Unicode fonts are supported, using too many decorative characters can trigger filters</li>

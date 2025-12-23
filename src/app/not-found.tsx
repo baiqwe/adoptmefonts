@@ -33,7 +33,7 @@ export default function NotFound() {
       />
       <main className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <div className="text-center mb-12">
           <h1 className="text-6xl sm:text-8xl font-bold text-zinc-200 mb-4">404</h1>
           <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 mb-4">
@@ -56,7 +56,7 @@ export default function NotFound() {
                 Generate adopt me fonts with bubble, bold, cute, and more styles
               </p>
             </Link>
-            
+
             <Link
               href="/preppy-font-generator"
               className="block p-4 bg-white rounded-lg border border-zinc-200 hover:border-pink-400 hover:shadow-md transition-all"
@@ -66,7 +66,7 @@ export default function NotFound() {
                 Create aesthetic preppy fonts with symbols and decorations
               </p>
             </Link>
-            
+
             <Link
               href="/adopt-me-names-generator"
               className="block p-4 bg-white rounded-lg border border-zinc-200 hover:border-pink-400 hover:shadow-md transition-all"
@@ -76,7 +76,7 @@ export default function NotFound() {
                 Generate creative names for your Adopt Me pets
               </p>
             </Link>
-            
+
             <Link
               href="/tag-filter-checker"
               className="block p-4 bg-white rounded-lg border border-zinc-200 hover:border-pink-400 hover:shadow-md transition-all"
@@ -117,7 +117,7 @@ export default function NotFound() {
               {" - Common questions and answers"}
             </li>
             <li>
-              <Link href="/styles/bubble-fonts" className="text-pink-600 hover:underline font-medium">
+              <Link href="/styles" className="text-pink-600 hover:underline font-medium">
                 Bubble Fonts Guide
               </Link>
               {" - Learn about bubble font styles"}

@@ -15,21 +15,9 @@ const breadcrumbs = [
 ];
 
 export default function StylesPage() {
-    // 定义 ID 到 URL 的精确映射，防止 404
+    // All styles redirect to homepage with style parameter selected
     const getStyleLink = (id: string) => {
-        switch (id) {
-            // 只有这些 ID 对应了真实的物理文件夹
-            case 'bubble': return '/styles/bubble-fonts';
-            case 'bold': return '/styles/bold-fonts';
-            case 'cute': return '/styles/cute-fonts';
-            case 'small-caps': return '/styles/small-caps';
-            case 'double-struck': return '/styles/double-struck';
-            case 'star-brackets': return '/styles/star-brackets';
-
-            // 其他所有样式（如 aesthetic-decor, heart-sparkle 等）
-            // 都没有独立页面，应该跳转到首页并自动选中该样式
-            default: return `/?style=${id}`;
-        }
+        return `/?style=${id}`;
     };
 
     return (

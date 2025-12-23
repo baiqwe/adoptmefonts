@@ -94,7 +94,7 @@ export default function BestPetNames2024() {
 
             <h3 className="text-lg font-medium mt-6 mb-3">Cute Names</h3>
             <p className="mb-4">
-              Cute names are always popular, especially for pets like cows, cats, and dogs. Consider names like "Fluffy," "Bubbles," "Sparkle," or "Cupcake." You can enhance these with cute fonts using our <Link href="/styles/cute-fonts" className="text-pink-600 underline">cute fonts generator</Link>.
+              Cute names are always popular, especially for pets like cows, cats, and dogs. Consider names like "Fluffy," "Bubbles," "Sparkle," or "Cupcake." You can enhance these with cute fonts using our <Link href="/?style=cute" className="text-pink-600 underline">cute fonts generator</Link>.
             </p>
 
             <h3 className="text-lg font-medium mt-6 mb-3">Cool Names</h3>

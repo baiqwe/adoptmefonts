@@ -94,7 +94,7 @@ export default function PreventNameFiltering() {
 
             <h3 className="text-lg font-medium mt-6 mb-3">Use Simple Font Styles</h3>
             <p className="mb-4">
-              While decorative fonts can look great, simpler styles like <Link href="/styles/bubble-fonts" className="text-pink-600 underline">Bubble</Link> or <strong>Bold</strong> fonts have higher compatibility and are less likely to trigger filters. Avoid combining multiple decorative styles in one name.
+              While decorative fonts can look great, simpler styles like <Link href="/styles" className="text-pink-600 underline">Bubble</Link> or <strong>Bold</strong> fonts have higher compatibility and are less likely to trigger filters. Avoid combining multiple decorative styles in one name.
             </p>
 
             <h3 className="text-lg font-medium mt-6 mb-3">Test Before Using</h3>

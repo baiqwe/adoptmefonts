@@ -225,13 +225,11 @@ export default function Home() {
           <div className="border border-zinc-200 rounded-lg p-4 bg-white">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xl">ⓑ</span>
-              <h4 className="font-semibold">
-                <a href="/styles/bubble-fonts" className="hover:text-pink-600 transition-colors">Bubble Fonts</a>
-              </h4>
+              <h4 className="font-semibold">Bubble Fonts</h4>
             </div>
             <p className="text-sm text-zinc-700">
               Bubble fonts are the most popular choice. They create a cute, playful look with circled letters that stand out.
-              Perfect for pet names and player names. High compatibility with Roblox. <a href="/styles/bubble-fonts" className="text-pink-600 underline">Learn more about bubble fonts</a>.
+              Perfect for pet names and player names. High compatibility with Roblox. <a href="/styles" className="text-pink-600 underline">Browse all font styles</a>.
             </p>
           </div>
 

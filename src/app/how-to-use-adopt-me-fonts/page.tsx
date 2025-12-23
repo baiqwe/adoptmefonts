@@ -59,7 +59,7 @@ export default function HowToPage() {
       />
       <main className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">How to Use Adopt Me Fonts in Roblox - Complete Guide</h1>
         <p className="text-lg text-zinc-700 mb-8">
           Want to make your Roblox name stand out? Adopt me fonts are a fun way to customize your player name, pet names, and even chat messages. This guide will walk you through everything you need to know, from generating fonts to using them in-game.
@@ -74,7 +74,7 @@ export default function HowToPage() {
             We have over 50 font styles to choose from. Popular options include:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-zinc-700 mb-4">
-            <li><Link href="/styles/bubble-fonts" className="text-pink-600 underline">Bubble fonts</Link> - Cute circled letters that work great for pet names</li>
+            <li><Link href="/styles" className="text-pink-600 underline">Bubble fonts</Link> - Cute circled letters that work great for pet names</li>
             <li>Bold fonts - Strong, readable text perfect for player names</li>
             <li>Cute fonts - Decorative styles with hearts and sparkles</li>
             <li>Small caps - Clean, professional look</li>
@@ -122,7 +122,7 @@ export default function HowToPage() {
             <li>Confirm the name</li>
           </ol>
           <p className="text-zinc-700 mb-4">
-            Pet names work best when they&apos;re short - under 20 characters is ideal. <Link href="/styles/bubble-fonts" className="text-pink-600 underline">Bubble fonts</Link> and cute styles are especially popular for pets because they look playful and fun.
+            Pet names work best when they&apos;re short - under 20 characters is ideal. <Link href="/styles" className="text-pink-600 underline">Bubble fonts</Link> and cute styles are especially popular for pets because they look playful and fun.
           </p>
           <p className="text-zinc-700">
             If you need inspiration, try our <Link href="/adopt-me-names-generator" className="text-pink-600 underline font-semibold">name generator</Link>. It creates cute pet names with emojis that you can then style with fonts.
@@ -157,7 +157,7 @@ export default function HowToPage() {
             <div className="border-l-4 border-blue-400 pl-4">
               <h3 className="font-semibold mb-2">Choose Compatible Styles</h3>
               <p className="text-zinc-700">
-                Not all font styles work equally well. <Link href="/styles/bubble-fonts" className="text-pink-600 underline">Bubble</Link>, bold, and small caps have the best compatibility across all devices. Decorative styles with lots of symbols might not display correctly on older devices.
+                Not all font styles work equally well. <Link href="/styles" className="text-pink-600 underline">Bubble</Link>, bold, and small caps have the best compatibility across all devices. Decorative styles with lots of symbols might not display correctly on older devices.
               </p>
             </div>
             <div className="border-l-4 border-green-400 pl-4">
@@ -199,7 +199,7 @@ export default function HowToPage() {
             Now that you know how to use adopt me fonts, head over to our <Link href="/" className="text-pink-600 underline font-semibold">font generator</Link> and create your perfect styled name. It only takes a few minutes, and you&apos;ll have a unique name that stands out in Adopt Me.
           </p>
           <p className="text-zinc-700 mb-4">
-            Need more help? Check out our <Link href="/faq" className="text-pink-600 underline font-semibold">FAQ page</Link> for answers to common questions, or explore our <Link href="/styles/bubble-fonts" className="text-pink-600 underline font-semibold">style guides</Link> to learn more about specific font types.
+            Need more help? Check out our <Link href="/faq" className="text-pink-600 underline font-semibold">FAQ page</Link> for answers to common questions, or explore our <Link href="/styles" className="text-pink-600 underline font-semibold">style guides</Link> to learn more about specific font types.
           </p>
           <p className="text-zinc-700">
             Want to create preppy or aesthetic names? Try our <Link href="/preppy-font-generator" className="text-pink-600 underline font-semibold">Preppy Font Generator</Link> or browse <Link href="/pet-names" className="text-pink-600 underline font-semibold">pet name ideas</Link> for inspiration.

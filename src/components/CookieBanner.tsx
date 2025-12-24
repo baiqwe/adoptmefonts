@@ -28,8 +28,8 @@ export default function CookieBanner() {
                 <p className="text-sm text-center sm:text-left">
                     🍪 We use cookies and Google AdSense to improve your experience and display relevant ads.
                     By continuing to use our site, you accept our use of cookies.{' '}
-                    <Link href="/privacy-policy" className="underline hover:text-pink-300 transition-colors">
-                        Learn more
+                    <Link href="/privacy-policy" aria-label="Read our Privacy Policy" className="underline hover:text-pink-300 transition-colors">
+                        Read our Privacy Policy
                     </Link>
                 </p>
                 <button
